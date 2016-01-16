@@ -48,4 +48,5 @@ app.on('activate', function () {
   if (mainWindow === null) {
     createWindow();
   }
+  console.log("app is active");
 });
