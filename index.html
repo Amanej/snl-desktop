@@ -16,21 +16,21 @@
     </div>
     <div class="artikkel">
 <!--
-      <h1>{{myData.title}}</h1>
+      <h1>{{articles.title}}</h1>
 
-      <p>Dato opprettet: {{myData.created_at}}</p>
-      <p>Endret: {{myData.changed_at}}</p>
+      <p>Dato opprettet: {{articles.created_at}}</p>
+      <p>Endret: {{articles.changed_at}}</p>
 
-      <a href="{{myData.url}}">Lenke til artikkelen</a><br/>
+      <a href="{{articles.url}}">Lenke til artikkelen</a><br/>
 
-      <a href="{{myData.subject_url}}">{{myData.subject_title}}</a><br/>
+      <a href="{{articles.subject_url}}">{{articles.subject_title}}</a><br/>
 
-      <div ng-bind-html="mydata.xhtml_body">
-        {{myData.xhtml_body}}
+      <div ng-bind-html="articles.xhtml_body">
+        {{articles.xhtml_body}}
       </div>-->
 
       <ul class="searchresults">
-        <li ng-repeat="article in myData">
+        <li ng-repeat="article in articles">
           <h2>{{article.title}}</h2>
           <a href="{{article.article_url}}">Link</a>
           <strong>{{article.clarification}}</strong>
