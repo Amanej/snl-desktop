@@ -11,7 +11,7 @@
         $scope.searchme;
         //$scope.search  = "Norge";
 
-        $scope.getResults = function() {
+        $scope.fetchResults = function() {
 
           $http({
             method: 'GET',
@@ -38,7 +38,7 @@
   <body ng-app="snlApp" ng-controller="searchCtrl">
     <div class="mainSearch">
       <div class="searchinput">
-        <input class="searchfield" type="text" name="searchfield" ng-model="searchme" ng-change="getResults()">
+        <input class="searchfield" type="text" name="searchfield" ng-model="searchme" ng-change="fetchResults()">
       </div>
     </div>
     <div class="artikkel">
