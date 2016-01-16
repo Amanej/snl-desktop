@@ -1,5 +1,5 @@
-var appang = angular.module('snlApp', ['ngSanitize']);
-appang.controller('searchCtrl', function($scope, $http) {
+var app = angular.module('snlApp', ['ngSanitize']);
+app.controller('searchCtrl', function($scope, $http) {
     $scope.searchme;
     $scope.fetchResults = function() {
     $http({
