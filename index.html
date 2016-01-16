@@ -5,34 +5,7 @@
     <link rel="stylesheet" href="snlstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.0-rc.0/angular-sanitize.js"></script>
-    <script>
-    var appang = angular.module('snlApp', ['ngSanitize']);
-    appang.controller('searchCtrl', function($scope, $http) {
-        $scope.searchme;
-        //$scope.search  = "Norge";
-
-        $scope.fetchResults = function() {
-
-          $http({
-            method: 'GET',
-            url: 'https://snl.no/api/v1/search?query=' + $scope.searchme
-          }).then(function successCallback(response){
-            console.log("It works");
-            $scope.myData = response.data;
-          }, function errorCallback(response) {
-            console.log("its alive");
-          });
-
-        }
-        $scope.getSingleArticle = function(id) {
-          $http.get("https://snl.no/api/v1/search?query=" + $scope.searchme).then(function(response) {
-              $scope.myData = response.data;
-              //console.log(myData);
-          });
-        }
-
-    });
-    </script>
+    <script src="app.js"></script>
     <title>Store Norske Leksikon</title>
   </head>
   <body ng-app="snlApp" ng-controller="searchCtrl">
