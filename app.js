@@ -1,11 +1,8 @@
 var appang = angular.module('snlApp', ['ngSanitize']);
 appang.controller('searchCtrl', function($scope, $http) {
     $scope.searchme;
-    //$scope.search  = "Norge";
-
     $scope.fetchResults = function() {
-
-      $http({
+    $http({
         method: 'GET',
         url: 'https://snl.no/api/v1/search?query=' + $scope.searchme
       }).then(function successCallback(response){
@@ -14,13 +11,5 @@ appang.controller('searchCtrl', function($scope, $http) {
       }, function errorCallback(response) {
         console.log("its alive");
       });
-
     }
-    $scope.getSingleArticle = function(id) {
-      $http.get("https://snl.no/api/v1/search?query=" + $scope.searchme).then(function(response) {
-          $scope.myData = response.data;
-          //console.log(myData);
-      });
-    }
-
 });
