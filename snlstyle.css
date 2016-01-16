@@ -26,6 +26,7 @@ background-color: transparent;
 border: none;
 color: white;
 border-bottom: 1px solid #fff;
+text-align: center;
 }
 
 .searchfield:focus {
@@ -46,5 +47,4 @@ border-color: white;
 
 .searchresults {
   list-style: none;
-  
 }
