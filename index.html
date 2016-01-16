@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.0-rc.0/angular-sanitize.js"></script>
     <script>
-    var appang = angular.module('myApp', ['ngSanitize']);
+    var appang = angular.module('snlApp', ['ngSanitize']);
     appang.controller('searchCtrl', function($scope, $http) {
         $scope.searchme;
         //$scope.search  = "Norge";
@@ -35,7 +35,7 @@
     </script>
     <title>Store Norske Leksikon</title>
   </head>
-  <body ng-app="myApp" ng-controller="searchCtrl">
+  <body ng-app="snlApp" ng-controller="searchCtrl">
     <div class="mainSearch">
       <div class="searchinput">
         <input class="searchfield" type="text" name="searchfield" ng-model="searchme" ng-change="getResults()">
