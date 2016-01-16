@@ -1,3 +1,6 @@
-#SNL Reader - Desktop application
+# SNL Reader - Desktop application
 
-An js based application that lets you access the Norwegian lexicon.
+A [Electron][0] based application that lets you access [SNL][1] a Norwegian lexicon.
+
+[0]: http://electron.atom.io/
+[1]: https://snl.no/
