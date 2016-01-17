@@ -5,13 +5,14 @@
     <link rel="stylesheet" href="snlstyle.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
     <script src="https://code.angularjs.org/1.5.0-rc.0/angular-sanitize.js"></script>
+    <script src="https://code.angularjs.org/1.5.0-rc.0/angular-route.js"></script>
     <script src="app.js"></script>
     <title>Store Norske Leksikon</title>
   </head>
   <body ng-app="snlApp" ng-controller="searchCtrl">
     <div class="mainSearch">
       <div class="searchinput">
-        <input class="searchfield" type="text" name="searchfield" ng-model="searchme" ng-change="fetchResults()">
+        <input class="searchfield" type="text" name="searchfield" ng-model="searchme" ng-change="fetchResults()" placeholder="Søk i det Store Norske Leksikon">
       </div>
     </div>
     <div class="artikkel">
@@ -32,10 +33,10 @@
       <ul class="searchresults">
         <li ng-repeat="article in articles">
           <h2>{{article.title}}</h2>
-          <a href="{{article.article_url}}">Link</a>
+          <a href="#">Lenke</a>
+          <p>Kategori: {{article.taxonomy_title}}</p>
           <strong>{{article.clarification}}</strong>
           <p ng-bind-html="article.snippet"></p>
-          <hr>
         </li>
       </ul>
     </div>
